@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 7fr;
+}
+
+.grid-container > .menu {
+    background-color: lightseagreen;
+    color: white;
+    grid-row: 1 / -1;
+}
+
+.grid-container > .main {
+    background-color: rgb(204, 204, 204);
+    grid-column: 2 / -1;
+}
