@@ -1,20 +1,137 @@
-body {
+html {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.9rem;
+    font: var(--fa-font-solid);
+    margin-right: 0.5rem;
+}
+
+.icon {
+    margin-top: 1.5rem;
+}
+
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 70px auto;
+    grid-template-areas:
+        "mb sb sb"
+        "mb hr bt"
+        "mb mn mn"
 }
 
-.grid-container > .menu {
+.grid-container>.menubar {
     background-color: lightseagreen;
     color: white;
-    grid-row: 1 / -1;
+    grid-area: mb;
 }
 
-.grid-container > .main {
-    background-color: rgb(204, 204, 204);
-    grid-column: 2 / -1;
+.grid-container>.top {
+    grid-area: sb;
+    color: black;
 }
+
+.grid-container>.header {
+    grid-area: hr;
+}
+
+.grid-container>.main {
+    background-color: rgb(204, 204, 204);
+    grid-area: mn;
+}
+
+.title {
+    font-size: 1.7rem;
+    margin: 2rem auto 0 1rem;
+    font-weight: 600;
+}
+
+
+
+.links {
+    margin: 2.5rem auto 3rem 1rem;
+}
+
+.home::before {
+    content: "\f015";
+}
+.profile::before {
+    content: "\f007";
+    margin-left: 0.1rem;
+}
+.messages::before {
+    content: "\f27a";
+}
+.history::before {
+    content: "\f017";
+}
+.tasks::before {
+    content: "\f0ae";
+}
+.communities::before {
+    content: "\e534";
+}
+
+
+.settings::before {
+    content: "\f013";
+}
+.support::before {
+    content: "\f059";
+}
+.privacy::before {
+    content: "\f3ed";
+}
+
+.search-icon {
+    margin: auto 1rem;
+}
+
+.search-box {
+    border: none;
+    border-radius: 25px;
+    width: 25vw;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: lightseagreen;
+}
+
+#searchbar {
+    /* margin: 0 auto 3rem 2rem; */
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    height: 1.5rem;
+    background-color: lightseagreen;
+}
+
